@@ -1,0 +1,90 @@
+\documentclass{beamer}
+\usepackage{xeCJK}
+\usetheme[red,colorblocks]{Verona}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{tikz,tikzpagenodes}
+\usetikzlibrary{fadings}
+
+%设置字体
+\def\mathfamilydefault{\rmdefault}
+
+%大纲格式：
+%\numexpr\inserttocsectionnumber-1\relax
+%只是为了在不知道 \inserttocsectionnumber 的计数器的情况下（Beamer 的说明文档里也没有，直接改 section 的计数器也没用，非常欢迎大家谁知道应该怎么改这个计数器了后告知我！）插入 5.0 节的一个技巧（
+\setbeamertemplate{section in toc}{\hspace*{1em}5.\the\numexpr\inserttocsectionnumber-1\relax~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}5.\the\numexpr\inserttocsectionnumber-1\relax.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+\setbeamerfont{subsection in toc}{size=\normalsize}
+\setbeamerfont{section in toc}{size=\large}
+\AtBeginSection
+{
+	\begin{frame}
+	    \frametitle{Content}
+		\textbf{\tableofcontents[currentsection]}
+	\end{frame}
+}
+
+%在右上角添加 logo
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.85cm]{标志与中英文校名组合规范_左右.png}};
+\end{tikzpicture}}
+
+%设置浅色渐变
+\setbeamercovered{transparent}
+
+\title{The LS-coupling scheme}
+\subtitle{Atomic Physics Chapter 5}
+\author{李昊润}
+\institute[PKU]{School of Physics, Peking University}
+\date{July 2024}
+
+\begin{document}
+
+%标题页
+\begin{frame}[plain]
+    \titlepage
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[above left] at ([shift={(-0.5cm,0.5cm)}]current page.south east) {\includegraphics[width=4cm]{标志_红色.png}};
+    \end{tikzpicture}
+\end{frame}
+
+%正文
+\include{sec/sec0}
+\include{sec/sec1}
+\include{sec/sec2}
+\include{sec/sec3}
+\include{sec/sec4}
+\include{sec/sec5}
+\include{sec/sec6}
+
+%reference，可惜只会用 IEEEtran。
+\begin{frame}{Reference}
+    \nocite{*}
+    \bibliography{ref}
+    \bibliographystyle{IEEEtran}
+\end{frame}
+
+%Q&A
+\beamertemplateshadingbackground{structure.fg!90}{structure.fg}
+\begin{frame}[plain]
+	\vfill
+	\centering
+	{
+		\centering \Huge \color{white}Q\&A
+	}
+	\vfill
+\end{frame}
+
+%Thank you
+\beamertemplateshadingbackground{structure.fg!90}{structure.fg}
+\begin{frame}[plain]
+	\vfill
+	\centering
+	{
+		\centering \Huge \color{white}Thank you for listening!
+	}
+	\vfill
+\end{frame}
+
+\end{document}
