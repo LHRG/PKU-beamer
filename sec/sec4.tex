@@ -1,0 +1,70 @@
+\section{Selection rules in the LS-coupling scheme}
+
+\begin{frame}{Electric dipole selection rules}
+\only<1,5-6>{
+    \begin{block}{Single electron}
+        From conservation laws and quantum mechanics calculations:
+        \begin{equation*}
+            \begin{cases}
+                    \Delta j=0, \pm1 \quad &(j=0 \nleftrightarrow j'=0),\\
+                    \Delta m_j=0, \pm1, \quad &(m_j=0 \nleftrightarrow m_{j'}=0 \text{ if } \Delta j=0),\\
+                    \Delta l=\pm1,&\\
+                    \Delta m_l=0, \pm1.&
+            \end{cases}
+        \end{equation*}
+    \end{block}}
+\only<2-4>{
+    \uncover<2-4>{
+    LS-coupling scheme:
+    \begin{equation*}
+        \begin{cases}
+            \Delta J=0,\pm1\quad &(J=0\nleftrightarrow J'=0), \\
+            \Delta M_J=0,\pm1\quad &(M_J=0\nrightarrow M_{J'}=0\text{ if }\Delta J=0), \\
+            \text{Parity changes}, \\
+            \Delta l=\pm1\quad &\text{One electron jump}, \\
+            \Delta L=0^{\footnotesize 1},\pm1\quad & (L=0\nleftrightarrow L'=0), \\
+            \Delta S=0^{\footnotesize 2}.&
+        \end{cases}
+    \end{equation*}}
+    \uncover<3-4>{
+        1.$\Delta L=0$ is possible in principle, but more than one electron must be excited to a high-energy state.}\\
+    \uncover<4>{
+        2.Exception: In the mercury atom, however, transitions with $\Delta S=1$ occur, such as $6\text{s}^2\ {}^1\mathrm{S}_0- 6\text{s}6\text{p }^3\mathrm{P} _1$, that gives a so-called intercombination line with a wavelength of 254 nm.}}
+\only<5-6>{
+    \uncover<5->{
+    jj-coupling scheme (two electrons) :
+    \begin{equation*}
+        \begin{cases}
+            \Delta j_1=0,\quad\Delta j_2=0,\pm1,\quad\text{or}&\Delta j_1=0,\pm1,\quad\Delta j_2=0,\\
+            \Delta J=0,\pm1\quad (J=0\nleftrightarrow J'=0),
+        \end{cases}
+    \end{equation*}}
+    \uncover<6->{
+    In fact, many elements fall between these two extreme situations, and the selection rules on both sides are not strictly followed.}}
+\end{frame}
+
+\begin{frame}{Magnetic dipole selection rules}
+\uncover<1->{
+    \begin{block}{}
+        According to the multipole expansion of electromagnetic interactions, the magnetic dipole interaction can be described as the interaction between magnetic moment and vector radius, with the coefficient being the first-order spherical harmonic function. \\
+        Therefore, the interaction can be expressed as
+        \begin{equation*}
+            {H}^{\prime}\propto\cos\theta Y_{10}(\theta,\phi)\propto Y_{00}(\theta,\phi).
+        \end{equation*}
+    \end{block}}
+\uncover<2->{
+    Therefore, apart from having the same selection rules as electric dipole transitions, there are also angular momentum selection rules: 
+    \begin{equation*}
+        \Delta l=0.
+    \end{equation*}}
+\uncover<3->{
+    Directly generalized to multi-electron atoms:
+    \begin{equation*}
+        \Delta n=0,
+        \begin{cases}
+            \Delta L=0, \quad &\Delta S=0, \\
+            \Delta J=0, \pm1, \quad &\Delta M_J=0, \pm1.
+        \end{cases}
+    \end{equation*}
+    }
+\end{frame}
